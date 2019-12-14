@@ -1,0 +1,29 @@
+body{
+	background-color: darkgray;
+}
+.nav-item{
+	border-width: 2px;
+	border-color: white;
+	border-style: solid;
+	font-family: 'Lilita One', cursive;
+}
+a{
+	color:gold;
+	background-color: navy; 
+	letter-spacing: 2px;
+	font-size: 30px;
+}
+a:hover{
+color: yellow;
+background-image: url("https://ak1.picdn.net/shutterstock/videos/22922461/thumb/1.jpg?i10c=img.resize(height:160)");
+font-weight: bolder;
+font-size: 32px;
+font-size: 630px 100px;
+outline: 3px solid black;
+text-shadow:
+		-2px -2px 0 #000,
+		2px -2px 0 #000,
+		-2px 2px 0 #000,
+		2px 2px 0 #000;
+}
+}
