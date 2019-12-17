@@ -1,6 +1,9 @@
 body{
 	background-color: darkgray;
 }
+.hide{
+	display: none;
+}
 .nav-item{
 	border-width: 2px;
 	border-color: white;
@@ -31,6 +34,12 @@ text-shadow:
 	border-style: solid;
 	border-width: 2px;
 	border-color: navy;
+	height: 400px;
+	position:relative;
+	margin-top: 30px;
+}
+.content{
+	margin-bottom: 30px;
 }
 .timer{
 	text-align: center;
@@ -39,4 +48,58 @@ text-shadow:
 .yourScore{
 	text-align: center;
 	font-weight: bold;
+}
+.welcome,.prompt,.content{
+	text-align: center;
+}
+#submit{
+	text-align: right;
+	position: absolute;
+	left: 210px;
+	top: 50px;
+	background-color: navy;
+	color: gold;
+	letter-spacing: 2px;
+	font-size: 30px;
+	font-family: 'Lilita One', cursive;
+}
+#submit:hover{
+	color: yellow;
+	background-image: url("https://ak1.picdn.net/shutterstock/videos/22922461/thumb/1.jpg?i10c=img.resize(height:160)");
+	font-weight: bolder;
+	font-size: 32px;
+	font-size: 630px 100px;
+	outline: 3px solid black;
+	text-shadow:
+		-2px -2px 0 #000,
+		2px -2px 0 #000,
+		-2px 2px 0 #000,
+		2px 2px 0 #000;
+}
+.quiz-1,.quiz-2,.quiz-3,.quiz-4,.quiz-5{
+	background-color: darkgray;
+	font-family: 'Lilita One', cursive;
+	color: gold;
+	text-shadow:
+	-1px -1px 0 #000,
+	1px -1px 0 #000,
+	-1px 1px 0 #000,
+	1px 1px 0 #000;
+	font-size: 20px;
+	width: 800px;
+	height: 200px;
+	border-style: solid;
+	border-color: navy;
+	border-width: 2px;
+	position: fixed;
+	bottom : 200px;
+	left: 200px;
+	display: normal;
+}
+.A,.B,.C,.D,.E,.F,.G,.H,.I,.J,.K,.L,.M,.N,.O,.P,.Q,.R,.S,.T{
+	width: 250px;
+	position : relative;
+	top: 5px;
+	left: 65px;
+	height: 50px;
 }

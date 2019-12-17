@@ -7,10 +7,11 @@
     <title>JavaScipt Quiz!</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Lilita+One&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <ul class="nav nav-pills nav-fill">
+    <ul class="nav nav-pills nav-fill mb-7">
         <!-- Past High Scores Item-->
         <li class="nav-item pastHighscores">
             <!-- Link to Past Scores -->
@@ -24,15 +25,161 @@
       </ul>
       <div class="container quizArea">
         <div class="row topRow mt-2">
-            <div class="col-md-3 timer">Seconds Left: <div id="seconds">60</div></div>
+            <div class="col-md-3 timer">Seconds Left: <div id="seconds"></div></div>
             <div class="col-md-3"></div>
             <div class="col-md-3"></div>
             <div class="col-md yourScore">Score: <div id="score">0</div></div>
         </div>
-        <div class="row content"></div>
-        <div class="row submitButton"></div>
-    </div></div>
+        <br>
+        <br>
+        <br>
+        <div class="row welcome">
+          <div class="col-md-12">
+            <h1>Welcome to JavaScipt Quiz!</h1>
+          </div>
+        </div>
+        <div class="row content">
+          <div class="col-md-12">
+            <h4>Your Logic will be put to the text!</h4>
+          </div>
+        </div>
+        <div class="row prompt">
+          <div class="col-md-12 input">
+            Input your initials: <input type="text" id="initials">
+          </div>
+        </div>
+        <div class="row submitButton">
+          <div class="col-md-4"></div>
+          <div class="col-md-4"></div>
+          <div class="col-md-4 submit"><button id="submit">Submit</button></div>
+        </div>
+      </div>
+      <section id="sect-1">
+        <div class="container quiz-1 hide">
+          <div class="row questions mb-2 mt-2">
+            <div class="col-md-12 question">
+              What is called upon in Javascript to run a certain action?
+            </div>
+          </div>
+          <div class="row mb-4">
+            <div class="col-6">
+              <button class="A">var</button>
+            </div>
+            <div class="col-md-6">
+              <button class="B">function()</button>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <button class="C">getElementById()</button>
+            </div>
+            <div class="col-md-6">
+              <button class="D">console.log()</button>
+            </div>
+          </div>
+        </div>
+      </section id="sect-2">
+      <section>
+        <div class="container quiz-2 hide">
+          <div class="row questions mb-2 mt-2">
+            <div class="col-md-12 question">
+              What function is used to run code every millisecond?
+            </div>
+          </div>
+          <div class="row mb-4">
+            <div class="col-6">
+              <button class="E">function()</button>
+            </div>
+            <div class="col-md-6">
+              <button class="F">JSON.stringify()</button>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <button class="G">setInterval()</button>
+            </div>
+            <div class="col-md-6">
+              <button class="H">.removeChild()</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="sect-3">
+        <div class="container quiz-3 hide">
+          <div class="row questions mb-2 mt-2">
+            <div class="col-md-12 question">
+              What software is used to "shorten" use of javascript?
+            </div>
+          </div>
+          <div class="row mb-4">
+            <div class="col-6">
+              <button class="I">HTML</button>
+            </div>
+            <div class="col-md-6">
+              <button class="J">CSS</button>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <button class="K">BootStrap</button>
+            </div>
+            <div class="col-md-6">
+              <button class="L">JQuery</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="sect-4">
+        <div class="container quiz-4 hide">
+          <div class="row questions mb-2 mt-2">
+            <div class="col-md-12 question">
+              Which is a loop used in javascript?
+            </div>
+          </div>
+          <div class="row mb-4">
+            <div class="col-6">
+              <button class="M">getElementById()</button>
+            </div>
+            <div class="col-md-6">
+              <button class="N">if(){}</button>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <button class="O">for(){}</button>
+            </div>
+            <div class="col-md-6">
+              <button class="P">console.log()</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="sect-5">
+        <div class="container quiz-5 hide">
+          <div class="row questions mb-2 mt-2">
+            <div class="col-md-12 question">
+              What function is used when wanting to log a piece of code in the console?
+            </div>
+          </div>
+          <div class="row mb-4">
+            <div class="col-6">
+              <button class="Q">console.log</button>
+            </div>
+            <div class="col-md-6">
+              <button class="R">var</button>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <button class="S">setInterval()</button>
+            </div>
+            <div class="col-md-6">
+              <button class="T">if(){}</button>
+            </div>
+          </div>
+        </div>
+      </section>
 
-    <script href="scipt.js"></script>
+    <script src="./script.js"></script>
 </body>
 </html>
