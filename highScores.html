@@ -22,7 +22,56 @@
           <a class="nav-link" href="./index.html">Back to the quiz!</a>
         </li>
       </ul>
-
-    <script href="scipt.js"></script>
+      <div class="container past mt-4">
+        <div class="row intro">
+          <div class="col-md-12 past-scores">
+            Past High Scores
+          </div>
+        </div>
+        <div class="row one">
+          <div class="col-md-12 first">#1. <div class="first-place">0</div></div>
+       </div>
+       <div class="row two">
+         <div class="col-md-12 second">#2. <div class="second-place">0</div></div>
+       </div>
+       <div class="row three">
+         <div class="col-md-12 third">#3. <div class="third-place">0</div></div>
+       </div>
+       <div class="row four">
+         <div class="col-md-12 fourth">#4. <div class="fourth-place">0</div></div>
+        </div>
+      <div class="row five">
+        <div class="col-md-12 fifth">#5. <div class="fifth-place">0</div></div>
+        </div>
+        </div>
+    <script>
+    var firstPlace = document.querySelector(".first-place");
+    var secondPlace = document.querySelector(".second-place"); 
+    var thirdPlace = document.querySelector(".third-place");
+    var fourthPlace = document.querySelector(".fourth-place");
+    var fifthPlace = document.querySelector(".fifth-place");
+    var finalScore = document.querySelector(".final-score");
+    var final = localStorage.getItem("score");
+    var initial = localStorage.getItem("name");
+    firstPlace = 0;
+    secondPlace = 0;
+    thirdPlace = 0;
+    fourthPlace = 0;
+    fifthPlace = 0;
+    function addToPast(){
+      if (final>fifthPlace){
+        fifthPlace.textContent = initial + " " + final;
+      } else if (final>fourthPlace){
+        fourthPlace.textContent = initial + " " + final;
+      } else if (final>thirdPlace){
+        thirdPlace.textContent = initial + " " + final;
+      } else if (final>secondPlace){
+        secondPlace.textContent = initial + " " + final;
+      } else if (final>firstPlace){
+        firstPlace.textContent = initial + " " + final;
+      } else return;
+    }
+    addToPast();
+    </script>
 </body>
 </html>

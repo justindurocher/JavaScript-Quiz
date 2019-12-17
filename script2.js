@@ -36,49 +36,51 @@ var startingScore = document.querySelector("#score");
 var quizCardFinal = document.querySelector(".quiz-final");
 var finalSeconds = document.querySelector(".final-seconds");
 var finalScore = document.querySelector(".final-score");
+   var firstPlace = document.querySelector(".first-place");
+   var secondPlace = document.querySelector(".second-place");    
+   var thirdPlace = document.querySelector(".third-place");
+   var fourthPlace = document.querySelector(".fourth-place");
+   var fifthPlace = document.querySelector(".fifth-place");
     var secondsLeft = 30;
     var score = 0;
- restartButton.addEventListener("click", reload);
- function reload(){
-     document.location.reload();
- }
- function setTime() {
-     var timerInterval = setInterval(function(){
-         secondsLeft--;
-         timer.textContent = secondsLeft + "s";
-
-         if(secondsLeft===0 || score===25){
-             clearInterval(timerInterval);
-             alert("Time is up!");
-             timer.textContent = "None!";
-             quizCard1.classList.add('hide');
-             quizCard2.classList.add('hide');
-             quizCard3.classList.add('hide');
-             quizCard4.classList.add('hide');
-             quizCard5.classList.add('hide');
-             quizCardFinal.classList.remove('hide');
-         }
-     }, 1200);
- } 
-submitButton.addEventListener("click",function(){
-    setTime();
-    quiz();
-});
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+function quiz(){
+   localStorage.setItem("name",initials.value);
+    submitButton.classList.add('hide');
+    promptArea.classList.add('hide');
+    welcome.classList.add('hide');
+    content.classList.add('hide');
+    quizCard1.classList.remove('hide');
+    buttonB.addEventListener("click", function(){
+       quizCard1.classList.add('hide');
+       quizCard2.classList.remove('hide');
+       score+=5;
+       startingScore.textContent = score;
+    });
+    buttonG.addEventListener("click",function(){
+       quizCard2.classList.add('hide');
+       quizCard3.classList.remove('hide');
+       score+=5;
+       startingScore.textContent = score;
+    });
+    buttonL.addEventListener("click",function(){
+       quizCard3.classList.add('hide');
+       quizCard4.classList.remove('hide');
+       score+=5;
+       startingScore.textContent = score;
+    });
+    buttonO.addEventListener("click",function(){
+       quizCard4.classList.add('hide');
+       quizCard5.classList.remove('hide');
+       score+=5;
+       startingScore.textContent = score;
+    });
+    buttonQ.addEventListener("click",function(){
+       quizCard5.classList.add('hide');
+       quizCardFinal.classList.remove('hide');
+       score+=5;
+       startingScore.textContent = score;
+       finalSeconds.textContent = secondsLeft;
+       finalScore.textContent = score + secondsLeft;
+       localStorage.setItem("score",finalScore.textContent);
+    });
+}
