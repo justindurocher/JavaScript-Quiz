@@ -45,12 +45,12 @@
         </div>
         </div>
     <script>
-    var firstPlace = document.querySelector(".first-place");
-    var secondPlace = document.querySelector(".second-place"); 
-    var thirdPlace = document.querySelector(".third-place");
-    var fourthPlace = document.querySelector(".fourth-place");
-    var fifthPlace = document.querySelector(".fifth-place");
-    var finalScore = document.querySelector(".final-score");
+    var firstPlace = $(".first-place");
+    var secondPlace = $(".second-place"); 
+    var thirdPlace = $(".third-place");
+    var fourthPlace = $(".fourth-place");
+    var fifthPlace = $(".fifth-place");
+    var finalScore = $(".final-score");
     var final = localStorage.getItem("score");
     var initial = localStorage.getItem("name");
     firstPlace = 0;
@@ -60,15 +60,15 @@
     fifthPlace = 0;
     function addToPast(){
       if (final>fifthPlace){
-        fifthPlace.textContent = initial + " " + final;
+        fifthPlace.text(initial + " " + final);
       } else if (final>fourthPlace){
-        fourthPlace.textContent = initial + " " + final;
+        fourthPlace.text(initial + " " + final);
       } else if (final>thirdPlace){
-        thirdPlace.textContent = initial + " " + final;
+        thirdPlace.text(initial + " " + final);
       } else if (final>secondPlace){
-        secondPlace.textContent = initial + " " + final;
+        secondPlace.text(initial + " " + final);
       } else if (final>firstPlace){
-        firstPlace.textContent = initial + " " + final;
+        firstPlace.text(initial + " " + final);
       } else return;
     }
     addToPast();
