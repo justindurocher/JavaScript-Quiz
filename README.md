@@ -1,1 +1,2 @@
 # JavaScript-Quiz
+In this application, I have created a simple five question quiz with html, css, and javascript. The user is able to type in their initials to be saved for past high scores. The user has 30 seconds to anwser these questions and every question anwsered wrong will deduct five seconds off of the seconds remaining. If user is completed before the time is up, the seconds left will be added to their final score. For each question anwsered the user will gin five points.
