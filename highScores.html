@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>JavaScipt Quiz!</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Lilita+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -29,19 +30,19 @@
           </div>
         </div>
         <div class="row one">
-          <div class="col-md-12 first">#1. <div class="first-place">0</div></div>
+          <div class="col-md-12 first">#1. <div class="first-place"></div></div>
        </div>
        <div class="row two">
-         <div class="col-md-12 second">#2. <div class="second-place">0</div></div>
+         <div class="col-md-12 second">#2. <div class="second-place"></div></div>
        </div>
        <div class="row three">
-         <div class="col-md-12 third">#3. <div class="third-place">0</div></div>
+         <div class="col-md-12 third">#3. <div class="third-place"></div></div>
        </div>
        <div class="row four">
-         <div class="col-md-12 fourth">#4. <div class="fourth-place">0</div></div>
+         <div class="col-md-12 fourth">#4. <div class="fourth-place"></div></div>
         </div>
       <div class="row five">
-        <div class="col-md-12 fifth">#5. <div class="fifth-place">0</div></div>
+        <div class="col-md-12 fifth">#5. <div class="fifth-place"></div></div>
         </div>
         </div>
     <script>
@@ -51,27 +52,16 @@
     var fourthPlace = $(".fourth-place");
     var fifthPlace = $(".fifth-place");
     var finalScore = $(".final-score");
-    var final = localStorage.getItem("score");
-    var initial = localStorage.getItem("name");
-    firstPlace = 0;
-    secondPlace = 0;
-    thirdPlace = 0;
-    fourthPlace = 0;
-    fifthPlace = 0;
-    function addToPast(){
-      if (final>fifthPlace){
-        fifthPlace.text(initial + " " + final);
-      } else if (final>fourthPlace){
-        fourthPlace.text(initial + " " + final);
-      } else if (final>thirdPlace){
-        thirdPlace.text(initial + " " + final);
-      } else if (final>secondPlace){
-        secondPlace.text(initial + " " + final);
-      } else if (final>firstPlace){
-        firstPlace.text(initial + " " + final);
-      } else return;
+    var finalName = localStorage.getItem("name");
+    var highScore = localStorage.getItem("score");
+    function addToPast() {
+          firstPlace.text(finalName + " " + highScore);
+          secondPlace.text(finalName + " " + highScore);
+          thirdPlace.text(finalName + " " + highScore);
+          fourthPlace.text(finalName + " " + highScore);
+          fifthPlace.text(finalName + " " + highScore);
     }
-    addToPast();
+  addToPast();
     </script>
 </body>
 </html>

@@ -19,7 +19,7 @@ var finalSeconds = $(".final-seconds");
 var finalScore = $(".final-score");
     var secondsLeft = 30;
     var score = 0;
-   localStorage.setItem("name",initials.value);
+   localStorage.setItem("name",initials.val());
     submitButton.addClass('hide');
     promptArea.addClass('hide');
     welcome.addClass('hide');
